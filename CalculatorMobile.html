@@ -1,0 +1,90 @@
+<html>
+		<head>
+			<style>
+			#main{width:350px; height:280px; background-color:black}
+			input{width:20%; height:40px; font-size:20px; margin:6px;}
+			#bb{width:96%; height:50px; background-color:green;}
+			.MM{background-color:red;}
+			</style>
+		</head>
+		<body>
+		<center>
+		<div id="main" >
+		
+			<form name="h" >
+				<input type="text" name="nn" placeholder="Developed by Mahiboob Mak" id="bb" pattern="[0-9]+" ><br>
+				<input type="button" value="C" class="MM" onclick="h.nn.value=''">
+				<input type="button" value="0" onclick="h.nn.value+=0">
+				<input type="button" value="=" class="MM" onclick="h.nn.value=eval(h.nn.value)">
+				<input type="button" value="X" class="MM" onclick="mul()">
+				<br>
+				<input type="button" value="7" onclick="h.nn.value+=7">
+				<input type="button" value="8" onclick="h.nn.value+=8">
+				<input type="button" value="9" onclick="h.nn.value+=9">
+				<input type="button" value="/" class="MM" onclick="div()">
+				<br>
+				<input type="button" value="4" onclick="h.nn.value+=4">
+				<input type="button" value="5" onclick="h.nn.value+=5">
+				<input type="button" value="6" onclick="h.nn.value+=6">
+				<input type="button" value="-" class="MM" onclick="sub()">
+				<br>
+				<input type="button" value="1" onclick="h.nn.value+=1">
+				<input type="button" value="2" onclick="h.nn.value+=2">
+				<input type="button" value="3" onclick="h.nn.value+=3">
+				<input type="button" value="+" class="MM" onclick="add()">
+				
+			</form>
+		
+		</div>
+			</center>
+		<script>
+		function add(){
+		var ad=0, b=0;
+		ad= h.nn.value;
+		b=ad.charAt(ad.length-1)
+		if(b=='+' || b=='-' || b=='/' || b=='*'){
+			h.nn.value=ad.substring(0, ad.length-1);
+			h.nn.value+='+';
+		}else{
+		h.nn.value+='+';
+		}
+		}
+		
+		function sub(){
+		var ad=0, b=0;
+		ad= h.nn.value;
+		b=ad.charAt(ad.length-1)
+		if(b=='+' || b=='-' || b=='/' || b=='*'){
+			h.nn.value=ad.substring(0, ad.length-1);
+			h.nn.value+='-';
+		}else{
+		h.nn.value+='-';
+		}
+		}
+		
+		function div(){
+		var ad=0, b=0;
+		ad= h.nn.value;
+		b=ad.charAt(ad.length-1)
+		if(b=='+' || b=='-' || b=='/' || b=='*'){
+			h.nn.value=ad.substring(0, ad.length-1);
+			h.nn.value+='/';
+		}else{
+		h.nn.value+='/';
+		}
+		}
+		
+		function mul(){
+		var ad=0, b=0;
+		ad= h.nn.value;
+		b=ad.charAt(ad.length-1)
+		if(b=='+' || b=='-' || b=='/' || b=='*'){
+			h.nn.value=ad.substring(0, ad.length-1);
+			h.nn.value+='*';
+		}else{
+		h.nn.value+='*';
+		}
+		}
+		</script>
+		</body>
+</html
